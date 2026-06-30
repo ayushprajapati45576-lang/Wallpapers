@@ -3,7 +3,7 @@ import { Heart, Code, Globe } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" >
       <div className="footer-content">
         <div className="footer-brand">
           <h3>Wallpapers</h3>
