@@ -304,12 +304,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem;
 }
 
-.wallpaper-card:hover .wallpaper-overlay {
-  opacity: 1;
-}
+@media (hover: hover) {
+  .wallpaper-card:hover .wallpaper-overlay {
+    opacity: 1;
+  }
 
-.wallpaper-card:hover .wallpaper-image {
-  transform: scale(1.05);
+  .wallpaper-card:hover .wallpaper-image {
+    transform: scale(1.05);
+  }
 }
 
 .photographer-info {
@@ -322,9 +324,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0.1s;
 }
 
-.wallpaper-card:hover .photographer-info {
-  transform: translateY(0);
-  opacity: 1;
+@media (hover: hover) {
+  .wallpaper-card:hover .photographer-info {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .photographer-info .name {
@@ -341,9 +345,25 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-.wallpaper-card:hover .download-btn {
-  opacity: 1;
-  transform: translateY(0);
+@media (hover: hover) {
+  .wallpaper-card:hover .download-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: none) {
+  .wallpaper-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 40%);
+  }
+  .photographer-info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .download-btn {
+    display: none; /* Mobile users can download from the modal */
+  }
 }
 
 /* Modal */
